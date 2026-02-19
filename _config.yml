@@ -1,0 +1,11 @@
+title: Red Mosquito Docs
+description: Product Requirements & Architecture Documentation
+theme: jekyll-theme-midnight
+url: https://bro-cornbread.github.io
+baseurl: /red-mosquito-docs
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

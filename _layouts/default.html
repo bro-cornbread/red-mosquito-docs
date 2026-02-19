@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <style>
+    :root {
+      --bg: #0A0A0F;
+      --card: #1A1A2E;
+      --elevated: #141420;
+      --primary: #E88F3D;
+      --primary-light: #F5A855;
+      --secondary: #367FA9;
+      --text: #FFFFFF;
+      --text-secondary: #B0B0C0;
+      --text-muted: #6B6B80;
+      --border: #2A2A3E;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    nav {
+      background: var(--elevated);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav .site-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    nav a.nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    nav a.nav-link:hover {
+      color: var(--text);
+      border-color: var(--primary);
+    }
+
+    nav a.nav-link.active {
+      background: var(--primary);
+      color: var(--bg);
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--primary-light);
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+
+    strong { color: var(--text); }
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: var(--text-secondary);
+    }
+
+    li { margin-bottom: 4px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--elevated);
+      color: var(--primary-light);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(26, 26, 46, 0.5);
+    }
+
+    code {
+      background: var(--card);
+      color: var(--primary-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    pre {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--primary);
+      padding-left: 16px;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      nav .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      h1 { font-size: 24px; }
+      h2 { font-size: 20px; }
+
+      table { font-size: 12px; }
+      th, td { padding: 6px 8px; }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="{{ site.baseurl }}/" class="site-title">Red Mosquito</a>
+      <div class="nav-links">
+        <a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Product Requirements</a>
+        <a href="{{ site.baseurl }}/architecture" class="nav-link {% if page.url == '/architecture.html' or page.url == '/architecture' %}active{% endif %}">Architecture</a>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    {{ content }}
+  </div>
+</body>
+</html>
