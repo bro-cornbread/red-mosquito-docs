@@ -102,7 +102,7 @@ Red Mosquito is the only app purpose-built for Pearl Jam fans that combines comp
 | **Show Detail** | Full setlist grouped by set, rarity badges, debut markers, tour name, show notes, setlist status indicator |
 | **Songs Explorer** | Searchable/sortable song catalog with rarity filters |
 | **Song Detail** | Stats, lyrics (collapsible), recent performances |
-| **"I Was There"** | Mark show attendance + 1-5 star rating (local storage) |
+| **"My Show"** | Mark show attendance + 1-5 star rating (local storage) |
 | **Simple Profile** | Show count, unique songs heard, basic stats |
 
 ### SHOULD Have (Post-MVP — Weeks 2-4)
@@ -155,7 +155,7 @@ Red Mosquito is the only app purpose-built for Pearl Jam fans that combines comp
 
 | ID | Story | Acceptance Criteria | Success Metric |
 |----|-------|-------------------|----------------|
-| S-07 | As a fan, I want to mark a show as attended | "I Was There" toggle persists locally; visual state changes | 60%+ of registered users mark at least 1 show |
+| S-07 | As a fan, I want to mark a show as attended | "My Show" toggle persists locally; visual state changes | 60%+ of registered users mark at least 1 show |
 | S-08 | As a fan, I want to rate shows I attended (1-5 stars) | Star rating only appears after marking attendance; persists locally | 40%+ of attended shows get rated |
 | S-09 | As a fan, I want to see my unique songs heard count | Profile shows accurate count derived from attended shows' setlists | Users check profile weekly |
 | S-10 | As a fan, I want to see how many shows I've attended | Profile shows count + percentage of all PJ shows | Drives repeat attendance marking |
@@ -219,7 +219,7 @@ The MVP delivers a read-heavy experience where fans can explore Pearl Jam's comp
 
 **Screens (6):**
 1. Shows list (with search + year filter)
-2. Show detail (setlist + rarity + "I Was There")
+2. Show detail (setlist + rarity + "My Show")
 3. Songs list (with search + sort + rarity filter)
 4. Song detail (stats + recent shows)
 5. Profile (attendance stats)
@@ -303,7 +303,7 @@ Everything about a single concert.
 
 - **Poster image** (if available)
 - **Date, venue, location, song count**
-- **"I Was There" toggle** — mark/unmark attendance
+- **"My Show" toggle** — mark/unmark attendance
 - **Star rating** (1-5) — only when marked as attended
 - **Full setlist** grouped by set (Set 1, Set 2, Encore, etc.):
   - Position number
@@ -423,7 +423,7 @@ Trophies reward fans across these dimensions:
 ## 9. Component Design Patterns
 
 ### Cards
-Rounded corners (12px border radius), dark card background (`#1A1A2E`), subtle border (`#2A2A3E`)
+Rounded corners (12px border radius), dark card background (`#1C1C20`), subtle border (`#2A2218`)
 
 ### Chips
 Rounded pill shape (16-20px border radius), outline in default state, filled with primary color when active
@@ -432,7 +432,7 @@ Rounded pill shape (16-20px border radius), outline in default state, filled wit
 Small rounded rectangles with tier color background and white text. Used for rarity tiers, "Cover" labels, "DEBUT" markers.
 
 ### Bar Charts
-Amber (`#E88F3D`) bars on dark background, grey axis labels, responsive to container width
+Crimson (`#BF2038`) bars on dark background, grey axis labels, responsive to container width
 
 ### Pie Charts
 Rarity tier colors with legend below the chart

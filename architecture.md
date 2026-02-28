@@ -463,19 +463,19 @@ JavaScript-only changes deploy instantly without app store review.
 ```javascript
 // tailwind.config.js colors
 colors: {
-  background:  '#0A0A0F',   // Deep cosmic black
-  card:        '#1A1A2E',   // Dark navy
-  elevated:    '#141420',   // Charcoal
-  primary:     '#E88F3D',   // Amber (PJ shop orange)
-  'primary-light': '#F5A855',
-  secondary:   '#367FA9',   // PJ Blue
+  background:  '#0C0C0C',   // Warm near-black
+  card:        '#1C1C20',   // Cool dark gray
+  elevated:    '#161618',   // Cool elevated
+  primary:     '#BF2038',   // Crimson red
+  'primary-light': '#DA3850',
+  secondary:   '#FFF700',   // Gold (brand)
   success:     '#34D399',   // Emerald
-  error:       '#EF4444',   // Red
-  warning:     '#F59E0B',   // Amber
-  'text-primary':   '#FFFFFF',
-  'text-secondary': '#B0B0C0',
-  'text-muted':     '#6B6B80',
-  border:      '#2A2A3E',
+  error:       '#FF6B35',   // Red
+  warning:     '#FFF700',   // Amber
+  'text-primary':   '#F5F0E8',  // Warm cream-white
+  'text-secondary': '#B8A99A',  // Warm tan
+  'text-muted':     '#6B6050',  // Warm muted
+  border:      '#2A2218',
 }
 ```
 
@@ -484,10 +484,10 @@ colors: {
 ```typescript
 const RARITY_COLORS = {
   'ultra-rare': '#E040FB',  // Electric Magenta
-  'rare':       '#EF4444',  // Bright Red
-  'uncommon':   '#F59E0B',  // Amber
+  'rare':       '#FF6B35',  // Bright Red
+  'uncommon':   '#FFF700',  // Amber
   'common':     '#34D399',  // Emerald Teal
-  'staple':     '#9CA3AF',  // Cool Grey
+  'staple':     '#8B8070',  // Cool Grey
 };
 ```
 
